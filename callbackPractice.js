@@ -85,7 +85,7 @@ multiply(4, 3, function(answer){
 
 
 
-  //Code Here for contains
+  //Code Here for contains  !
 
   var contains = function(arr, str, cb) {
     var isPresent = true;
@@ -141,7 +141,9 @@ uniq(names, function(uniqArr){
     //Code Here for each
 
     var each = function(arr, cb) {
-      
+      for (var i = 0; i < arr.length; i++) {
+      cb(arr[i], i);
+      };
     }
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
