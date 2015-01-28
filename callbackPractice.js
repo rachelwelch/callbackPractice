@@ -45,6 +45,10 @@ first(names, function(firstName){
 
   //Code Here for last
 
+  var last = function(arr, cb) {
+    cb(arr[arr.length - 1]);
+  }
+
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 last(names, function(lastName){
   console.log('The last name in names is ', lastName);
@@ -62,6 +66,10 @@ last(names, function(lastName){
 
 
   //Code Here for multiply
+
+  var multiply = function(a, b, cb) {
+    cb(a * b);
+  }
 
 multiply(4, 3, function(answer){
   console.log('The answer is ', answer); //should console.log 12
