@@ -87,14 +87,17 @@ multiply(4, 3, function(answer){
 
   //Code Here for contains
 
-  var contains = function(arr, str) {
-    cb(for (var i = 0; i < arr.length; i++) {
-        if (arr[i] === str) {
-          return true;
-        });
+  var contains = function(arr, str, cb) {
+    var isPresent = true;
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] !== str) {
+        isPresent === false;
+      }
+      cb(isPresent);
+    }
   }
 
-var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+var names = ['Tyler', 'Cahlan', 'Ryan', 'Rachel', 'Tyler', 'Blaine', 'Cahlan'];
 contains(names, 'Colt', function(result){
   if(result === true){
     console.log('Colt is in the array');
