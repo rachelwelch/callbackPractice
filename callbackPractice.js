@@ -88,16 +88,16 @@ multiply(4, 3, function(answer){
   //Code Here for contains  !
 
   var contains = function(arr, str, cb) {
-    var isPresent = true;
+    var isPresent = false;
     for (var i = 0; i < arr.length; i++) {
-      if (arr[i] !== str) {
-        isPresent === false;
+      if (arr[i] === str) {
+        isPresent = true;
       }
       cb(isPresent);
     }
   }
 
-var names = ['Tyler', 'Cahlan', 'Ryan', 'Rachel', 'Tyler', 'Blaine', 'Cahlan'];
+var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 contains(names, 'Colt', function(result){
   if(result === true){
     console.log('Colt is in the array');
