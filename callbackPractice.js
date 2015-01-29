@@ -184,9 +184,8 @@ each(names, function(item, indice){
  var getUserById = function(arr, str, cb) {
     for (var i = 0; i < arr.length; i++) {
       if (arr[i].id === str) {
-        console.log(arr[i]);
+        cb(arr[i]);
       }
-      cb(arr[i]);
     }
  }
 
