@@ -117,11 +117,29 @@ contains(names, 'Colt', function(result){
 
     //Code Here for uniq
 
+option 1:
+
 var uniq = function(arr, cb) {
   cb(arr.filter(function(elem, pos) {
     return arr.indexOf(elem) === pos;
   }));
 }
+
+option 2:
+
+var uniq = function(arr, cb) {
+  var uniqObject = {};
+  var returnArr = [];
+  for (var i = 0; i < arr.length; i++) {
+    uniqObject[arr[i]] = null;  //adds a key named "arr[i]" to the uniqObject object
+  }
+  for (var key in uniqObject) {
+    returnArr.push(key);
+  }
+  cb(returnArr);
+}
+
+
     
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
